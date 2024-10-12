@@ -8,7 +8,11 @@ const Sidebar = () => {
     (toggle) => toggle.news.toggleFormStatus
   );
   return (
-    <div className={`flex flex-row w-screen transition-all duration-700  ${toggleFormStatus&&"backdrop-blur-sm"}`}>
+    <div
+      className={`flex flex-row w-screen transition-all duration-700  ${
+        toggleFormStatus && "backdrop-blur-sm"
+      }`}
+    >
       <div className="p-10 shadow-black  h-auto rounded-lg bg-[#ecf0f2]">
         <div className=" w-[300px] bg-white p-4 flex rounded-lg shadow-lg">
           <div className="mx-2">
