@@ -1,10 +1,9 @@
-1.Created New React Project
-2. Added Tailwind css
-3.Installed Redux Toolkit
-4.Added Redux Slice and Store
-5.Checked GET API on Postman
-6.Installed React-router-Dom
-7.Installed Axios
-8.Installed React-icons
+Task Completion
 
-NOTE: Completed all task Assigned
+
+Created the project and installed required dependencies.
+Implemented Redux for state management.
+Handled API data (with dummy fields where necessary).
+Ensured proper routing and API communication.
+ETC
+All tasks assigned have been completed as requested:
