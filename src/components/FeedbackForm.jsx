@@ -1,4 +1,32 @@
+import { useState } from "react";
+
 const FeedbackForm = () => {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    address: "",
+    country: "",
+    email: "",
+    phoneNumber: "",
+  });
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.id]: e.target.value,
+    });
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    window.alert("Form Submitted Successfully");
+    setFormData({
+      firstName: "",
+      lastName: "",
+      address: "",
+      country: "",
+      email: "",
+      phoneNumber: "",
+    });
+  };
   return (
     <div className="flex min-h-full flex-1 flex-col justify-center p-10 lg:px-8 z-9999 bg-[#ecf4f9] w-auto">
       <div className="sm:mx-auto sm:w-full sm:max-w-auto ">
@@ -9,7 +37,7 @@ const FeedbackForm = () => {
       </div>
 
       <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-        <form className="space-y-6">
+        <form className="space-y-6" onSubmit={handleSubmit}>
           <div>
             <label
               htmlFor="firstName"
@@ -23,6 +51,8 @@ const FeedbackForm = () => {
                 name="firstName"
                 type="text"
                 placeholder="Sagar"
+                value={formData?.firstName}
+                onChange={handleChange}
                 required
                 className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-white placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#5CC8A1] sm:text-sm sm:leading-6 p-1 h-12"
               />
@@ -41,6 +71,8 @@ const FeedbackForm = () => {
                 name="lastName"
                 type="text"
                 placeholder="Wagdare"
+                value={formData?.lastName}
+                onChange={handleChange}
                 required
                 className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-white placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#5CC8A1] sm:text-sm sm:leading-6 p-1 h-12"
               />
@@ -55,10 +87,12 @@ const FeedbackForm = () => {
             </label>
             <div className="mt-2 ">
               <textarea
-                id="about"
-                name="about"
+                id="address"
+                name="address"
                 rows={6}
                 cols={60}
+                value={formData?.address}
+                onChange={handleChange}
                 placeholder="Enter your full Postal Address"
                 type="text"
                 required
@@ -80,6 +114,8 @@ const FeedbackForm = () => {
                 type="text"
                 required
                 placeholder="India"
+                value={formData?.country}
+                onChange={handleChange}
                 className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-white placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#5CC8A1] sm:text-sm sm:leading-6 p-1 h-12"
               />
             </div>
@@ -97,6 +133,8 @@ const FeedbackForm = () => {
                 name="email"
                 type="email"
                 required
+                value={formData?.email}
+                onChange={handleChange}
                 placeholder="sagar@gmail.com"
                 className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-white placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#5CC8A1] sm:text-sm sm:leading-6 p-1 h-12"
               />
@@ -113,8 +151,9 @@ const FeedbackForm = () => {
               <input
                 id="phoneNumber"
                 name="phoneNumber"
-                type="tel"
+                type="number"
                 required
+                value={+91}
                 placeholder="+91"
                 maxLength={3}
                 className="block w-10 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-white placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#5CC8A1]  sm:text-sm sm:leading-6 p-1 h-12 "
@@ -125,6 +164,8 @@ const FeedbackForm = () => {
                 type="tel"
                 required
                 placeholder="983482398"
+                value={formData?.phoneNumber}
+                onChange={handleChange}
                 maxLength={10}
                 className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-white placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#5CC8A1] sm:text-sm sm:leading-6 p-1 h-12"
               />
