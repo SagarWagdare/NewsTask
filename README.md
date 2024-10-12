@@ -1,8 +1,10 @@
-# React + Vite
+1.Created New React Project
+2. Added Tailwind css
+3.Installed Redux Toolkit
+4.Added Redux Slice and Store
+5.Checked GET API on Postman
+6.Installed React-router-Dom
+7.Installed Axios
+8.Installed React-icons
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+NOTE: Completed all task Assigned
