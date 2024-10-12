@@ -9,8 +9,8 @@ const Sidebar = () => {
   );
   return (
     <div
-      className={`flex flex-row w-screen transition-all duration-700  ${
-        toggleFormStatus && "backdrop-blur-sm"
+      className={`flex shadow-2xl  flex-row  transition-all duration-700  ${
+        toggleFormStatus ? "backdrop-blur-sm w-screen":"w-[400px] h-screen"
       }`}
     >
       <div className="p-10 shadow-black  h-auto rounded-lg bg-[#ecf0f2]">

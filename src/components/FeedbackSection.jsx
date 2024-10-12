@@ -1,16 +1,13 @@
 import { useDispatch, useSelector } from "react-redux";
 import { toggleForm } from "../redux/features/NewsSlice";
-import { useState } from "react";
 
 const FeedBackSection = () => {
   const dispatch = useDispatch();
-  const [toggleValue, setToggleValue] = useState(false);
   const toggleFormStatus = useSelector(
     (toggle) => toggle.news.toggleFormStatus
   );
   const handleToggle = () => {
-    dispatch(toggleForm(toggleValue));
-    setToggleValue(!toggleValue);
+    dispatch(toggleForm(!toggleFormStatus));;
   };
   return (
     <div className="my-5 w-[300px] bg-white p-4 flex flex-col rounded-lg shadow-lg justify-center items-center gap-2">

@@ -73,7 +73,7 @@ const NewsSection = () => {
       {loading ? (
         <>
           {toggleStatus ? (
-            <div className="flex flex-wrap pt-8 z-0 gap-2 items-center justify-center">
+            <div className="flex flex-wrap pt-8 z-0 gap-2 items-center mx-20">
               {currentItems &&
                 currentItems.map((news) => (
                   <div
