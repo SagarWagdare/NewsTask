@@ -24,7 +24,6 @@ const NewsSection = () => {
       await axios
         .get(`https://jsonplaceholder.typicode.com/posts`)
         .then((res) => {
-          console.log(res);
           dispatch(getNewsData(res?.data));
           setTotalData(res?.data.length - 1);
         })
