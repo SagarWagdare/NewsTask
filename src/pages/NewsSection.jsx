@@ -99,7 +99,7 @@ const NewsSection = () => {
                 ))}
             </div>
           ) : (
-            <div className="flex flex-col">
+            <div className="flex flex-col pt-10">
               {currentItems &&
                 currentItems.map((news) => (
                   <div key={news?.id} className="flex flex-wrap gap-8">
